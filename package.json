@@ -37,14 +37,8 @@
     "url": "https://github.com/Ripple-TS/ripple/issues"
   },
   "dependencies": {
-    "@ripple-ts/adapter": "workspace:*",
-    "@tsrx/ripple": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "catalog:default",
-    "ripple": "workspace:*",
-    "type-fest": "catalog:default",
-    "vite": "catalog:default"
+    "@ripple-ts/adapter": "0.3.65",
+    "@tsrx/ripple": "0.3.65"
   },
   "publishConfig": {
     "access": "public"
