@@ -25,8 +25,10 @@ import { ENTRY_FILENAME } from './constants.js';
 
 import { patch_global_fetch, is_rpc_request, handle_rpc_request } from '@ripple-ts/adapter/rpc';
 
-// Re-export route classes
-export { RenderRoute, ServerRoute } from './routes.js';
+// Re-export route classes and `defineConfig` from the build-tool-free
+// `./config.js` entry. Config files should import these from
+// `@ripple-ts/vite-plugin/config` to keep Vite out of production bundles.
+export { RenderRoute, ServerRoute, defineConfig } from './config.js';
 export {
 	getRippleConfigPath,
 	loadRippleConfig,
@@ -1283,11 +1285,6 @@ import { hydrate, mount } from 'ripple';
 	];
 
 	return plugins;
-}
-
-// This is mainly to enforce types and provide a better DX with types than anything else
-export function defineConfig(/** @type {RippleConfigOptions} */ options) {
-	return options;
 }
 
 // ============================================================================
