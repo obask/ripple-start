@@ -20,6 +20,11 @@
       "import": "./src/server/production.js",
       "default": "./src/server/production.js",
       "types": "./types/production.d.ts"
+    },
+    "./config": {
+      "types": "./types/config.d.ts",
+      "import": "./src/config.js",
+      "default": "./src/config.js"
     }
   },
   "homepage": "https://ripple-ts.com",

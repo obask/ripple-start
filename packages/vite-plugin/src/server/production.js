@@ -19,7 +19,10 @@ import {
 	handle_rpc_request,
 } from '@ripple-ts/adapter/rpc';
 
-export { resolveRippleConfig } from '../load-config.js';
+// Import directly from `resolve-config.js` — never via `load-config.js`,
+// which depends on Vite and would drag the entire build toolchain into
+// the production server bundle when traced by deployment adapters.
+export { resolveRippleConfig } from '../resolve-config.js';
 
 /**
  * @typedef {import('@ripple-ts/vite-plugin').Route} Route
