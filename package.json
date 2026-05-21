@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@ripple-ts/adapter": "0.3.65",
-    "@tsrx/ripple": "0.3.65"
+    "@tsrx/ripple": "0.1.13"
   },
   "publishConfig": {
     "access": "public"
